@@ -1,0 +1,17 @@
+# Create bee swarm plot with Seaborn's default settings
+_ = sns.swarmplot(x='species', y='petal length (cm)', data=df)
+
+# Label the axes
+_ = plt.xlabel('species')
+_ = plt.ylabel('petal length (cm)')
+
+# Show the plot
+plt.show()
+
+
+For your reference, the code Justin used to create the bee swarm plot in the video is provided below:
+
+_ = sns.swarmplot(x='state', y='dem_share', data=df_swing)
+_ = plt.xlabel('state')
+_ = plt.ylabel('percent of vote for Obama')
+plt.show()
