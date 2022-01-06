@@ -1,0 +1,20 @@
+We can quantify this spread with the variance. The variance is the average of the squared distance from the mean. 
+Calculation of the variance is implemented in the np dot var function. Now, because the calculation of the variance involves squared quantities, it does not have the same units of what we have measured, in this case the vote share for Obama. Therefore, we are interested in
+
+7. Computing the standard deviation
+the square root of the variance, which is called the standard deviation. This is calculated with the np dot std function, and the results are the same as taking the square root of the variance.
+
+# Array of differences to mean: differences
+differences = versicolor_petal_length - np.mean(versicolor_petal_length)
+
+# Square the differences: diff_sq
+diff_sq = differences**2
+
+# Compute the mean square difference: variance_explicit
+variance_explicit = np.mean(diff_sq)
+
+# Compute the variance using NumPy: variance_np
+variance_np = np.var(versicolor_petal_length)
+
+# Print the results
+print(variance_explicit, variance_np)
